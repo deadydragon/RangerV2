@@ -15,7 +15,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
 PINK = (255, 195, 203)
-img_dir = os.path.dirname(__file__)+'/data'
+img_dir = os.path.dirname(__file__) + '/data'
 
 ANIMATION = ['bg_1.png', 'bg_2.png', 'bg_3.png', 'bg_4.png',
              'bg_5.png', 'bg_6.png', 'bg_7.png', 'bg_8.png']  # текстуры бэк граунда
@@ -237,10 +237,10 @@ class Bullet(pygame.sprite.Sprite):  # пули и лазер-1 для босс�
 
     def update(self):
         self.rect.y += self.speedy
-        if self.name == 'hero': # для пули героя
+        if self.name == 'hero':  # для пули героя
             if self.rect.bottom < 0:
                 self.kill()
-        else: # для пуль врагов и лазера-1 босса
+        else:  # для пуль врагов и лазера-1 босса
             if self.rect.top > 600:
                 self.kill()
 
